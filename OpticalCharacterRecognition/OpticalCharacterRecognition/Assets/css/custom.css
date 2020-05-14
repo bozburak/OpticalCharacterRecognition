@@ -1,0 +1,95 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #D50000, #b06ab3);
+    color: #d7d7ef;
+    font-family: 'LATO', sans-serif
+}
+
+h2 {
+    margin: 50px 0
+}
+
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 25px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    transition: .2s
+}
+
+.choose-file-button {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.file-message {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    widows: 100%;
+    cursor: pointer;
+    opacity: 0
+}
+.custom-button {
+    max-width: 100%;
+    width: 100% !important;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    transition: .2s;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 10%;
+    text-align: center;
+    font-size: 18px;
+    color: #d7d7ef;
+}
+    .custom-button:hover {
+        background: #c5395a;
+        color: #d7d7ef;
+    }
+    .custom-button:focus {
+        box-shadow: 0 0 0 0.2rem rgb(160, 111, 127) !important;
+    }
+.result-textarea {
+    width: 600px;
+    height: 225px;
+    border: 1px dashed rgba(255, 255, 255, 0.4) !important;
+    border-radius: 3px;
+    transition: .2s;
+    background: #c5395a;
+    color: #d7d7ef;
+    font-size: 22px;
+}
+.c-white {
+    color: #fff;
+}
+
+.result-textarea:focus {
+    box-shadow: 0 0 0 0.2rem rgb(160, 111, 127) !important;
+    outline-color: rgb(160, 111, 127);
+}
+
+
+
