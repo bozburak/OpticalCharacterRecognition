@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Tesseract;
@@ -38,16 +35,19 @@ namespace OpticalCharacterRecognition.Controllers
                     }
                     ViewBag.Message = "File uploaded successfully";
                     ViewBag.ImagePath = "/Assets/img/" + file.FileName;
+                    ViewBag.FileName = file.FileName;
                 }
                 catch (Exception ex)
                 {
                     ViewBag.Message = "ERROR:" + ex.Message.ToString();
                     ViewBag.Image = null;
+                    ViewBag.FileName = null;
                 }
             else
             {
                 ViewBag.Message = "You have not specified a file.";
                 ViewBag.Image = null;
+                ViewBag.FileName = null;
             }
             return View();
         }

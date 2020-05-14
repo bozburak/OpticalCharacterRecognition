@@ -12,8 +12,15 @@
     <form action="/Home/Index" method="post" enctype="multipart/form-data">
         <div class="file-drop-area">
             <span class="choose-file-button">Choose Files</span>
-            <span class="file-message">or drag and drop files here</span>
-            <input type="file" name="file" class="file-input" accept=".jfif,.jpg,.jpeg,.png,.gif" multiple>
+            @if (ViewBag.FileName != null)
+            {
+                <span class="file-message">@ViewBag.FileName</span>
+            }
+            else
+            {
+                <span class="file-message">or drag and drop files here</span>
+            }
+            <input type="file" name="file" class="file-input" accept="jpg,.jpeg,.png">
         </div>
         <div id="divImageMediaPreview">
             @if (!string.IsNullOrEmpty(ViewBag.ImagePath))
